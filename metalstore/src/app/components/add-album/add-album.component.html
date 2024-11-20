@@ -1,0 +1,23 @@
+<div class="container px-5 py-14 mx-auto">
+  <h1>Add Album - Reactive form</h1>
+
+  <form [formGroup]="albumForm" (ngSubmit)="onSubmit2()">
+    Title:
+    <input type="text" formControlTitle="title" />
+    @if(albumForm.get('title')?.invalid &&
+    albumForm.get('title')?.touched){<span>Title is required</span>}
+    @if(albumForm.controls.title.errors?.['minlength']){<span
+      >Title with at least 3 letter</span
+    >}
+
+    <br />
+    Quantity:
+    <input type="number" formControlTitle="quantity" /> <br />
+    <input
+      class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded disabled:border-red-500"
+      type="Submit"
+      value="Add Album"
+      [disabled]="!albumForm.valid"
+    />
+  </form>
+</div>

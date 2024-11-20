@@ -1,0 +1,27 @@
+
+<h3 class="text-light text-center">Albums</h3>
+<main class="container col-md-8 mt-4 text-light">
+
+<div class="row">
+    <div class="col-md-12">
+      <div class="filter-search mb-3">
+        Filter <input type="text" [(ngModel)]="searchValue" />
+        {{ searchValue }}
+      </div>
+
+@for (a of album; track a.id) { @if(searchValue === '' ||
+a.title.toLowerCase().includes(searchValue)||
+a.artist.toLowerCase().includes(searchValue)
+) {
+  <app-album
+  [aList]="a"
+  (delete)="deleteAlbum($event)"
+  (quantityChange)="quantityChange($event)"
+  class="card-dark shadow p-3"
+  style="width: 18rem;"
+>
+</app-album>
+} }
+</div>
+  </div>
+</main>

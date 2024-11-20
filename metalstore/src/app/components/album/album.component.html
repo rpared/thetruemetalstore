@@ -1,0 +1,21 @@
+<div class="album">
+  <span class="album-title">
+    <button class="remove-album" (click)="onDelete(aList.id)">X</button>
+    {{ aList.title }}
+  </span>
+  <span class="counter">
+    <button
+      class="counter-action increment"
+      (click)="onQuantityChange(aList.id, -1)"
+    >
+      -
+    </button>
+    <span class="counter-items">{{ aList.quantity }}</span>
+    <button
+      class="counter-action decrement"
+      (click)="onQuantityChange(aList.id, 1)"
+    >
+      +
+    </button>
+  </span>
+</div>

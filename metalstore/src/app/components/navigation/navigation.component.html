@@ -1,53 +1,59 @@
 <nav class="navbar navbar-expand-lg bg-black navbar-dark">
 <div class="container-fluid">
-<a class="navbar-brand" href="/">The True Metal Store</a>
+<a class="navbar-brand" href="/"> 
+<img src="assets/images/logo.png" alt="logo" width="220" height="75" class="d-inline-block align-top">
+</a>
 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
 
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ">
-            <li class="nav-item ">
-            <a class="nav-link text-danger active"
-                routerLink="/"
-                routerLinkActive="active"
-                [routerLinkActiveOptions]="{ exact: true }"
-                >Home</a
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse w-100" id="navbarNav">
+            <ul class="navbar-nav ml-4">
+                <li class="nav-item menu-item">
+                <a class="nav-link text-danger"
+                    routerLink="/"
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }"
+                    >Home</a
+                >
+                </li>
+                <li class="nav-item menu-item">
+                <a class="nav-link text-danger"
+                    routerLink="/albums"
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }"
+                    >Albums</a
+                >
+                </li>
+                <li class="nav-item menu-item">
+                <a class="nav-link text-danger"
+                    routerLink="/about"
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }"
+                    >About</a
+                >
+                </li>
+                <li class="nav-item menu-item">
+                <a class="nav-link text-danger"
+                    routerLink="/reviews"
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }"
+                    >Reviews</a
+                >
+                </li>
+            </ul>
+            <div class="d-flex ml-auto">
+            <a class="nav-link btn btn-danger" 
+                    routerLink="/cart"
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }"
             >
-            </li>
-            <!--/* <li class="nav-item">
-            <a class="nav-link text-danger"
-                routerLink="/news"
-                routerLinkActive="active"
-                [routerLinkActiveOptions]="{ exact: true }"
-                >News</a
-            >
-            </li> */-->
-            <li class="nav-item ">
-            <a class="nav-link text-danger"
-                routerLink="/albums"
-                routerLinkActive="active"
-                [routerLinkActiveOptions]="{ exact: true }"
-                >Albums</a
-            >
-            </li>
-            <li class="nav-item">
-            <a class="nav-link text-danger"
-                routerLink="/about"
-                routerLinkActive="active"
-                [routerLinkActiveOptions]="{ exact: true }"
-                >About</a
-            >
-            </li>
-            <li class="nav-item">
-            <a class="nav-link text-danger"
-                routerLink="/reviews"
-                routerLinkActive="active"
-                [routerLinkActiveOptions]="{ exact: true }"
-                >Reviews</a
-            >
-            </li>
-        </ul>
+                 🛒Cart
+            </a>
+            </div>
+        </div>
     </div>
+
 </div>
 </nav>

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { AlbumListComponent } from './components/album-list/album-list.component';
+
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
@@ -12,7 +12,6 @@ import { NavigationComponent } from './components/navigation/navigation.componen
     NavigationComponent,
     HeaderComponent,
     RouterOutlet,
-    AlbumListComponent,
     FooterComponent
 
   ],

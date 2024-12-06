@@ -1,0 +1,57 @@
+
+<div class="container text-light mt-4">
+  <h3 class="text-center mb-4">Items in Cart</h3>
+
+    
+  <h2>Your Cart</h2>
+  <div class="row">
+  
+    <ng-container *ngIf="cartItems.length > 0; else emptyCart">
+      <div class="col-md-8">
+        <div class="cart-items">
+          <div *ngFor="let item of cartItems" class="cart-item mb-3">
+            <div class="row align-items-center">
+              <div class="col-md-3">
+                <img [src]="item.imageUrl" [alt]="item.title" class="album-image">
+              </div>
+              <div class="col-md-6">
+                <h3 class="album-title">{{ item.title }}</h3>
+                <p class="artist">Artist: {{ item.artist }}</p>
+                <p class="price">${{ item.price | number:'1.2-2' }}</p>
+              </div>
+              <div class="col-md-3 quantity-control">
+                <button class="btn btn-outline-light mr-2 my-2" (click)="updateQuantity(item, item.quantity - 1)">-</button>
+                <span>{{ item.quantity || 1 }}</span>
+                <button class="btn btn-outline-light ml-2 my-2" (click)="updateQuantity(item, item.quantity + 1)">+</button>
+                <button class="btn btn-outline-danger my-2" (click)="removeFromCart(item)">Remove</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    
+    
+      <div class="cart-summary">
+        <h4>Cart Summary</h4>
+        <div class="cart-summary-totals ml-1">
+          <p>Total Items: {{ getCartItemCount() }}</p>
+          <p>Subtotal: ${{ total | number:'1.2-2' }}</p>
+          <p>Shipping: calculated at checkout</p>
+          <p>HST: ${{ getHST() }}</p>
+          <p class="price">Total: ${{ getTotal() }}</p>
+        </div>
+        
+        <button class="btn btn-danger w-100 my-2" (click)="clearCart()">Checkout</button>
+        <button class="btn btn-outline-danger w-100" (click)="clearCart()">Clear Cart</button>
+      </div>
+    </ng-container>
+
+    <ng-template #emptyCart>
+      <p class="ml-4" >Your cart is empty</p>
+    </ng-template>
+  </div>
+
+
+
+</div> 

@@ -3,6 +3,7 @@ import { AlbumListComponent } from './components/album-list/album-list.component
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ReviewsComponent } from './components/reviews/reviews.component';
+import { CartComponent } from './components/cart/cart.component';
 
 export const routes: Routes = [
     {
@@ -12,6 +13,7 @@ export const routes: Routes = [
       { path: 'albums', component: AlbumListComponent },
       { path: 'about', component: AboutComponent },
       { path: 'reviews', component: ReviewsComponent},
+      { path: 'cart', component: CartComponent}
       
 
 ];

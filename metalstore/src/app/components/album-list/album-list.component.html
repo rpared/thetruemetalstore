@@ -1,27 +1,54 @@
-
-<h3 class="text-light text-center">Albums</h3>
-<main class="container col-md-8 mt-4 text-light">
-
-<div class="row">
-    <div class="col-md-12">
-      <div class="filter-search mb-3">
-        Filter <input type="text" [(ngModel)]="searchValue" />
-        {{ searchValue }}
+<div class="container text-light mt-4">
+  <h3 class="text-center mb-4">Albums</h3>
+  
+  <!-- Search input -->
+  <div class="row mb-4">
+    <div class="col-md-6 offset-md-3">
+      <div class="input-group">
+        <span class="input-group-text">🔍</span>
+        <input 
+          type="text" 
+          class="form-control" 
+          placeholder="Search albums by title or artist" 
+          [(ngModel)]="searchValue"
+          (input)="searchAlbum($event)"
+        >
       </div>
-
-@for (a of album; track a.id) { @if(searchValue === '' ||
-a.title.toLowerCase().includes(searchValue)||
-a.artist.toLowerCase().includes(searchValue)
-) {
-  <app-album
-  [aList]="a"
-  (delete)="deleteAlbum($event)"
-  (quantityChange)="quantityChange($event)"
-  class="card-dark shadow p-3"
-  style="width: 18rem;"
->
-</app-album>
-} }
-</div>
+    </div>
   </div>
-</main>
+
+  <!-- Albums List -->
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+    <div *ngFor="let album of album" class="col">
+      <div class="album-card border border-light">
+        <img 
+          [src]="album.imageUrl" 
+          [alt]="album.title + ' album cover'" 
+          class="album-image w-100"
+        >
+        <div class="album-details p-3">
+          <div class="price mb-2">
+            ${{ album.price | number:'1.2-2' }}
+          </div>
+          <div class="album-title text-muted small mb-1">
+            {{ album.title }}
+          </div>
+          <div class="artist text-muted small mb-3">
+            {{ album.artist }}
+          </div>
+          <button 
+            class="btn btn-outline-light w-100" 
+            (click)="addToCart(album)"
+            [disabled]="album.quantity === 0"
+          >
+            🛒 Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="album.length === 0" class="alert alert-info text-center" role="alert">
+    No albums found matching your search.
+  </div>
+</div>

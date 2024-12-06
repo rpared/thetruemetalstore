@@ -1,0 +1,11 @@
+h5{
+    margin-bottom: 0;
+    color: rgb(0, 0, 0);
+}
+
+.header{
+    position: relative; 
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.8);
+    background-color: #951616;
+    z-index: 100;
+}

@@ -1,0 +1,56 @@
+
+
+.cart-item {
+    background: transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid rgba(255,255,255,0.1) !important;
+    
+  }
+
+  .cart-summary {
+    padding: 1rem;
+    background-color: rgb(19, 19, 19);
+  }
+
+  .cart-summary-totals *{
+    margin: 0 0 0 2px;
+  }
+  
+  /* .album-details {
+    display: flex;
+    flex-direction: column;
+  }
+  */
+  .album-image {
+    width: 180px;
+
+    object-fit: cover;
+  }
+  
+  .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: left;
+  }
+  
+  .album-title {
+    margin-top: 1rem;
+    text-align: left;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+  
+  .artist {
+    font-size: 0.8rem;
+    text-align: left;
+  }
+
+
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .album-image {
+      height: 140px;
+    }
+  }

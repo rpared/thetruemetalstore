@@ -23,14 +23,6 @@ body {
 }
 
 
-.menu-item {
-  color: #ffffff;
-  padding: 0.5rem 1rem;
-  margin: 0;
-  border-left: 1px solid rgb(129, 0, 0);
-  text-align: center;
-}
-
 .banner {
   background-image: url("assets/images/home-banner.png");
   background-size: cover;
@@ -76,6 +68,8 @@ body {
   background: transparent;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 2px solid rgba(255,255,255,0.1) !important;
+  justify-content: center;
+  text-align: center;
 }
 
 .album-card:hover {
@@ -85,8 +79,9 @@ body {
 
 .album-image {
   max-height: 350px;
-
+  justify-content: center;
   object-fit: cover;
+  width: 100%;
 }
 
 .album-details {
@@ -124,9 +119,3 @@ body {
   color: gray;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .album-image {
-    height: 250px;
-  }
-}

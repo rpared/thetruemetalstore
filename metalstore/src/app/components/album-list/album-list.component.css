@@ -1,0 +1,40 @@
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .album-image {
+      height: 250px;
+  
+    }
+    .album-card {
+      width: fit-content;
+      margin: auto;
+    }
+  }
+  @media (max-width: 575px) {
+    .album-image {
+      max-height: 200px;
+      max-width: 200px;
+    }
+    .album-card {
+      width: fit-content;
+      padding: 0;
+      margin: auto; 
+    }
+  }
+
+@media (max-width: 474px) {
+    .custom-cols-xs-2 > .col {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin: auto; 
+    }
+  }
+  
+  @media (min-width: 475px) and (max-width: 575px) {
+    .custom-cols-xs-2 > .col {
+      flex: 0 0 50%;
+      max-width: 50%;
+      margin: auto; 
+    }
+
+  }

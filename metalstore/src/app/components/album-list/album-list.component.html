@@ -17,13 +17,13 @@
   </div>
 
   <!-- Albums List -->
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 mb-2">
-    <div *ngFor="let album of album" class="col">
-      <div class="album-card border border-light mb-2">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 mb-2 custom-cols-xs-2">
+    <div *ngFor="let album of album" class="col mx-auto">
+      <div class="album-card border border-light mb-2 ">
         <img 
           [src]="album.imageUrl" 
           [alt]="album.title + ' album cover'" 
-          class="album-image w-100"
+          class="album-image "
         >
         <div class="album-details p-3">
           <div class="price mb-2">

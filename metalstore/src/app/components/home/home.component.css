@@ -1,0 +1,64 @@
+.home-card{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.8);
+    background-color: rgb(32, 32, 32);
+    transition: all 0.3s;
+    max-height: 200px;
+}
+
+.home-card-title{
+    font-size: 1.5rem;
+    background-color: #301212;
+    border-radius: 3px;
+    padding: 6px 10px 1px;
+    margin: 0px;
+}
+
+.promotions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    background-image: url("../../../assets/images/promotions-banner.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-color: #301212;
+    box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.8);
+    opacity: 0.8;
+} 
+
+.promotion-item {
+    text-align: center;
+    border: 1px solid #adb5bd;
+    border-radius: 4px;
+    padding: 4px 14px;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.8);
+  }
+  
+  .promotion-item h4 {
+    font-size: 1.5rem;
+    color: #f8f9fa;
+  }
+  
+  .promotion-item p {
+    font-size: 1rem;
+    color: #cccccc;
+    
+  }
+  
+  .text-warning {
+    color:#f8f9fa !important;
+  }
+
+@media (max-width: 950px) {
+    .home-card {
+      max-height: fit-content;
+    }
+    .home-card-title {
+        font-size: 1.2rem;
+    }
+    
+  }

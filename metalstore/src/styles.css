@@ -58,12 +58,6 @@ body {
   }
 }
 
-/* .album-image {
-  max-width: 200px;
-  height: auto;
-  object-fit: cover;
-} */
-
 .album-card {
   background: transparent;
   transition: transform 0.3s ease, box-shadow 0.3s ease;

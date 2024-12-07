@@ -1,17 +1,17 @@
 <div class="container mt-4 bg-black">
-  <h3 class="text-light text-center">Reviews</h3>
+  <h2 class="text-light text-center">Reviews</h2>
   <div class="container">
-    <div class="row">
-  @for (r of reviews; track r.id) {
-      <div class="col-md-6 col-lg-4 col-xl-3 col-xxl-2 d-flex">
-          <div class="card-dark bg-dark border-danger shadow p-2 m-2 text-light rounded" style="width: 18rem;">
-            <div class="card-body">
-        <h5 class="card-title">{{ r.name }}</h5>
-        <p class="card-text">{{ r.body }}</p>
-        <!--/* <button class="btn btn-danger" (click)="deleteReview(r.id)">Delete</button> */-->
-        </div>
+    <div class="row mb-2">
+      <div *ngFor="let r of reviews | paginate: { itemsPerPage: itemsPerPage, currentPage: p }; let i = index" class="col-md-8 col-lg-4  d-flex">
+        <div class="m-2 text-light card-dark">
+          <div class="card-body">
+            <h5 class="card-title p-2">{{ r.name }}</h5>
+            <p class="card-text p-1">{{ r.body }}</p>
+            <!-- <button class="btn btn-danger" (click)="deleteReview(r.id)">Hide</button> -->
+          </div>
         </div>
       </div>
-  }
+    </div>
+    <pagination-controls class="text-center" (pageChange)="p = $event"></pagination-controls>
   </div>
 </div>

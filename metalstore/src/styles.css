@@ -16,12 +16,6 @@ body {
 
 }
 
-.header{
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
-  background-color: #951616;
-  z-index: 100;
-}
-
 .btn-danger {
   color: #fff;
   background-color: #951616;
@@ -85,8 +79,8 @@ body {
 }
 
 .album-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(255,255,255,0.2);
+  transform: scale(1.01);
+  box-shadow: 0 0 8px rgba(255,255,255,0.2);
 }
 
 .album-image {
@@ -113,6 +107,21 @@ body {
 
 .artist {
   text-align: center;
+}
+
+.ngx-pagination .current {
+  background: #951616 !important; 
+  color: #ffffff; 
+}
+
+.ngx-pagination a:hover {
+  color: #951616 !important; 
+ 
+}
+
+.ngx-pagination .disabled {
+  opacity: 0.2;
+  color: gray;
 }
 
 /* Responsive adjustments */

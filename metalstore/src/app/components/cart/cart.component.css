@@ -54,3 +54,9 @@
       height: 140px;
     }
   }
+
+  @media (max-width: 575px) {
+    .cart-summary {
+      order: -1; /* Move the cart-summary to the top */
+    }
+  }

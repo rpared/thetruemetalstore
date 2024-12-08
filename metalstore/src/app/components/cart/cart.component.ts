@@ -2,11 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AlbumService } from '../../services/album.service';
 import { IAlbum } from '../album-list/album-list.component';
+import { RouterLink, } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,
+    RouterLink,
+  ],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.css'
 })

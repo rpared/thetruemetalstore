@@ -54,8 +54,9 @@
           <p class="price">Total: ${{ getTotal() }}</p>
         </div>
         
-        <button class="btn btn-danger w-100 my-2" (click)="alertMessage('Your order has been placed, but do not expect it please 😁!!
-Submit your comments to Roger!')">Checkout</button>
+        <!--/* <button class="btn btn-danger w-100 my-2" (click)="alertMessage('Your order has been placed, but do not expect it please 😁!!
+Submit your comments to Roger!')">Checkout</button> */-->
+        <button class="btn btn-danger w-100 my-2" routerLink="/checkout">Checkout</button>
         <button class="btn btn-outline-danger w-100" (click)="clearCart()">Clear Cart</button>
       </div>
     </ng-container>

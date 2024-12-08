@@ -1,14 +1,63 @@
 <div class="container-fluid bg-black text-light p-0 m-0">
-  <div class="row w-100 m-0 ">
-    <div class="banner w-100">
+  
+
+  <div id="homeBannerCarousel" class="carousel slide" data-bs-ride="carousel">
+  <!--/* <div class="carousel-indicators">
+    <button type="button" data-bs-target="#homeBannerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#homeBannerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#homeBannerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div> */-->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="carousel-banner d-flex align-items-center justify-content-center" style="background-image: url('/assets/images/home-banner.png');">
+        <div class="carousel-caption text-start">
+          <h2 class="banner-title">Welcome to The True Metal Store!</h2>
+          <p class="lead banner-text">Your one-stop shop for all things heavy metal.</p>
+          <a routerLink="/albums" class="btn btn-danger btn-lg">Shop Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="carousel-banner d-flex align-items-center justify-content-center" style="background-image: url('/assets/images/home-banner2.png');">
+        <div class="carousel-caption text-start">
+          <h2 class="banner-title">Merch from all over!</h2>
+          <p class="lead banner-text">Explore our extensive collection of merch.</p>
+          <a routerLink="/albums" class="btn btn-danger btn-lg">Browse Collection</a>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="carousel-banner d-flex align-items-center justify-content-center" style="background-image: url('/assets/images/home-banner3.png');">
+        <div class="carousel-caption text-start">
+          <!--/* <h2 class="banner-title">New Arrivals Every Week</h2> */-->
+          <img src="/assets/images/logo.png">
+          <p class="lead banner-text">New Arrivals Every Week</p>
+          <a routerLink="/albums" class="btn btn-danger btn-lg">See What's New</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#homeBannerCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#homeBannerCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden"></span>
+  </button>
+</div>
+<!--/*
+<div class="row w-100 m-0 ">
+     <div class="banner w-100">
       <div class="col-md-12 p-4 pl-5 text-shadow">
         <h2 class="banner-title" >Welcome to The True Metal Store!</h2>
         <p class="lead banner-text">Your one-stop shop for all things heavy metal.</p>
         <a routerLink="/albums" class="btn btn-danger btn-lg">Shop Now</a>
       </div>
     </div>
+</div> */-->
     
-  </div>
+  
 
   <div class="row d-flex align-items-stretch mt-5 mx-4">
     <div class="col-md-6">

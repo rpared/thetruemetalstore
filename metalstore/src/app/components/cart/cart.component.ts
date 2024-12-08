@@ -13,6 +13,7 @@ import { IAlbum } from '../album-list/album-list.component';
 export class CartComponent implements OnInit {
   cartItems: IAlbum[] = [];
   total: number = 0;
+  message: string = 'Thank you for shopping with us! Your order has been placed, but do not expect it please 😁.';
 
   constructor(private albumService: AlbumService) {}
 
@@ -64,6 +65,11 @@ export class CartComponent implements OnInit {
   }
 
   getTotal(): number {
-    return parseFloat(this.total + this.getHST().toFixed(1));
+    const total = this.total + this.getHST();
+    return parseFloat(total.toFixed(2));
+  }
+
+  alertMessage(message: string): void {
+    alert(message);
   }
 }

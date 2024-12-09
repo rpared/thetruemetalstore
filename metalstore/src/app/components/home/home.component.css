@@ -52,7 +52,7 @@
   border: none;
   opacity: .6;
   background-color: transparent;
-  transition: opacity .15s ease;
+  transition: opacity .5s ease;
 }
 
 .carousel-control-next:hover, .carousel-control-prev:hover{
@@ -76,6 +76,10 @@
   border-radius: 50%;
   width: 50px;
   height: 50px;
+}
+
+.carousel-item {
+  transition: transform 0.3s ease-in-out; /* Adjust the transition duration */
 }
 .carousel-item img {
   height: 140px;
@@ -138,17 +142,21 @@
     text-align: center;
     right: 0%;
     left: 0%;
+    
     text-shadow: 2px 2px 4px rgba(0,0,0), 0 0 8px rgba(0,0,0), 0 0 16px rgba(0,0,0);
   }
   .carousel-caption h2 {
     font-size: 1.5rem;
+    padding: 3px 0;
+    background-color: rgba(0, 0, 0, 0.3);
   }
   .carousel-caption .lead {
     font-size: 0.85rem;
   }
   .carousel-caption .btn {
-    font-size: 0.8rem;
-    padding: 0.25rem 0.5rem;
+    font-size: 0.9rem;
+    padding: 0.35rem 0.7rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0);
   }
   
 }
@@ -228,17 +236,19 @@
     border: 1px solid #adb5bd;
     border-radius: 4px;
     padding: 4px 14px;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
     box-shadow: 0 0 14px rgba(0, 0, 0, 0.8);
   }
   
   .promotion-item h4 {
     font-size: 1.5rem;
     color: #f8f9fa;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
   }
   
   .promotion-item p {
     font-size: 1rem;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
     color: #cccccc;
     
   }

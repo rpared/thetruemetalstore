@@ -9,6 +9,7 @@ type QuantityChange = {
 @Injectable({
   providedIn: 'root'
 })
+
 export class AlbumService {
   private albums: IAlbum[] = [
     {

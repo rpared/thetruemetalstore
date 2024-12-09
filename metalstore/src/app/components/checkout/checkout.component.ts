@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { CheckoutDataService } from '../../services/checkout-data.service';
 
 @Component({
   selector: 'app-checkout',
@@ -8,15 +10,17 @@ import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angula
   imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './checkout.component.html',
   styleUrl: './checkout.component.css'
+
 })
 export class CheckoutComponent implements OnInit {
   checkoutForm: FormGroup | undefined;
   countries: string[] = [
     'United States', 'Canada', 'United Kingdom', 'Australia', 
-    'Germany', 'France', 'Japan', 'Brazil', 'India', 'Other'
+    'Germany', 'Ecuador', 'France', 'Japan', 'Brazil', 'India', 'Other'
   ];
 
-  constructor(private fb: FormBuilder) {}
+
+  constructor(private fb: FormBuilder, private checkoutDataService: CheckoutDataService, private router: Router) {}
 
   ngOnInit(): void {
     this.initializeForm();
@@ -59,14 +63,18 @@ export class CheckoutComponent implements OnInit {
 
   onSubmit(): void {
     if (this.checkoutForm?.valid) {
-      console.log(this.checkoutForm.value);
-      // Here you would typically send the form data to your backend
+      this.checkoutDataService.setData(this.checkoutForm.value);
+      this.router.navigate(['/payment']);
     } else {
-      if (this.checkoutForm) {
-        this.markFormGroupTouched(this.checkoutForm);
-      }
+      this.markFormGroupTouched(this.checkoutForm!);
     }
   }
+
+  
+
+
+
+  
 
   // Helper method to mark all controls as touched
   markFormGroupTouched(formGroup: FormGroup) {

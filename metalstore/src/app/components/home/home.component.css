@@ -200,14 +200,15 @@
 /* Cards */
 .home-card {
   margin-top: 10px;
-  margin-bottom: 20px;
-  padding: 10px;
+  /* margin-bottom: 20px;
+  padding: 10px; */
   border-radius: 3px;
   box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.8);
   background-color: rgb(32, 32, 32);
   transition: all 0.3s;
   display: flex;
   flex-direction: column;
+  max-height: 176px;
 }
 
 .home-card-title{
@@ -217,6 +218,11 @@
     padding: 6px 10px 1px;
     margin: 0px;
 }
+
+.home-card .home-album{
+  width: 220px;
+}
+
 
 /* Promotions */
 .promotions {
@@ -262,6 +268,15 @@
     align-items: stretch;
   }
 
+  @media (max-width: 1100px) {
+    .home-card .home-album{
+      width: 180px;
+    }
+    .home-card {
+      height: 280px;
+    }
+
+  }
 
 @media (max-width: 950px) {
     .home-card {
@@ -270,12 +285,51 @@
     .home-card-title {
         font-size: 1.2rem;
     }
+    .home-card .home-album{
+      width: 150px;
+      vertical-align: middle;
+    }
+
     
   }
 
   @media (max-width: 768px) {
     .home-card {
       max-height: fit-content;
+      margin-bottom: 10px;
+      
+    }
+    .home-card .row{
+      display: grid;
+      grid-template-columns: 1fr 1fr !important; /* Single column for smaller screens */
+    }
+    .home-card .home-album{
+      width: max-content;
+      
     }
 
+  }
+
+  @media (max-width: 600px) {
+
+    .home-card .home-album{
+      max-width: 100%;
+    }
+    .col-md-7, .col-md-5 {
+      padding-right: 0;
+    }
+    .col-md-7 {
+      padding-left: 0;
+    }
+    .home-card a{
+      font-size: 0.9rem;
+      padding: 0.35rem 0.7rem;
+    }
+  }
+
+  @media (max-width: 550px) {
+.mx-4 {
+  margin-left: 0.4rem !important;
+  margin-right: 0.4rem !important;
+}
   }

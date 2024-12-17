@@ -6,11 +6,9 @@ import * as bootstrap from 'bootstrap';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [
-    RouterModule
-  ],
+  imports: [RouterModule],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.css',
 })
 export class HomeComponent implements OnInit, AfterViewInit {
   private carousel: HTMLElement | null = null;
@@ -22,7 +20,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.carousel = this.el.nativeElement.querySelector('#homeBannerCarousel');
-    
+
     if (this.carousel) {
       this.initializeHammer();
     }
@@ -48,9 +46,11 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
     // Use Bootstrap's carousel method
     const bootstrapCarousel = bootstrap.Carousel.getInstance(carousel);
-    
+
     if (bootstrapCarousel) {
-      direction === 'next' ? bootstrapCarousel.next() : bootstrapCarousel.prev();
+      direction === 'next'
+        ? bootstrapCarousel.next()
+        : bootstrapCarousel.prev();
     }
   }
 
@@ -62,24 +62,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // import { Component } from '@angular/core';
 // import { RouterModule } from '@angular/router';
-
-
 
 // @Component({
 //   selector: 'app-home',
